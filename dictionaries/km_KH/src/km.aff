@@ -1,42 +1,27 @@
 SET UTF-8
 
+# Minimum word length: Prevents single character matches like "ា" (vowel signs)
+MINWORDLENGTH 2
+
+# Character suggestions for spell-checking
+# Generated from km.dic sorted by character frequency
+TRY ្ារកសបនតមិងលទអវុចយព់ំោគេជីហញណដូភែធ៉ខើះឹួៀថផឆៈ័ឡៗៃ៍ឧ៊ឃឋឺៅឌឈ៍ឥឿឱ‌ឫឍឯ៎ឪ៏ឮឩឰឦឳឭ។ឬ០១២៣៤៥៦៧៨៩‍៕៛៚៙៘
+
 # BREAK: Define word break characters
-# "​" (U+200B Zero Width Space) is an invisible character used as a word boundary marker in Khmer text
+# "​" (U+200B Zero Width Space) - invisible word boundary marker
 # "៕" (U+17D5 Khmer Sign Bariyoosan) - section sign
 # "។" (U+17D4 Khmer Sign Khan) - full stop/period
-# " " (U+0020 Space) - regular space
-BREAK 4
+# "៛" (U+17DB Khmer Currency Symbol Riel)
+# "ៗ" (U+17D7 Khmer Sign Lek Too) - repetition sign
+# "៚" (U+17DA Khmer Sign Koomuut)
+# "៙" (U+17D9 Khmer Sign Phnaek Muan)
+# "៘" (U+17D8 Khmer Sign Beyyal)
+BREAK 8
 BREAK ​
 BREAK ៕
 BREAK ។
-BREAK  
-
-REP 2
-# "្"+"ត" to "្"+"ដ"
-REP ្ត ្ដ
-# Double zero-width spaces "​​" (U+200B U+200B) to single zero-width space "​" (U+200B)
-REP ​​ ​
-
-# Prefix rule for "ទី" (place/location marker)
-# ទីកន្លែង
-# ទីប្រឹក្សា
-# ទីបញ្ជាការ
-# ទីរហោស្ថាន
-# ទីវាល
-# ទីផ្សារ
-# ទីក្រុង
-PFX T Y 1
-PFX T 0 ទី .
-
-# Prefix rule for "ការ" (action/nominalization prefix)
-# ការស្លាប់
-# ...
-PFX G Y 1
-PFX G 0 ការ .
-
-# Suffix rule for "ការណ៍" (report/statement suffix)
-# ផ្លូវការណ៍
-# របាយការណ៍
-# ថ្លែងការណ៍
-SFX K Y 1
-SFX K 0 ការណ៍ .
+BREAK ៛
+BREAK ៗ
+BREAK ៚
+BREAK ៙
+BREAK ៘

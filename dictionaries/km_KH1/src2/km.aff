@@ -1,0 +1,11 @@
+SET UTF-8
+
+# npx hunspell-reader words src/km.dic
+
+TRY xwzBសម្ំ
+
+PFX A Y 1
+PFX A zzzz zxwxwz .
+
+PFX B Y 1
+PFX B ម្ ំ .

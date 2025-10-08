@@ -4,7 +4,7 @@ targets:
   - name: 'km-kh'
     sources:
       - filename: 'src/km.dic'
-        maxDepth: 1
+        maxDepth: 5
     format: 'trie3'
     targetDirectory: './dict'
     generateNonStrict: true
